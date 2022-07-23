@@ -49,7 +49,9 @@ processResources {
 }
 
 tasks.withType(ScalaCompile).configureEach {
-	targetCompatibility = ''
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+//	targetCompatibility = ''
 	sourceSets {
 		main {
 			scala {
@@ -70,8 +72,8 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
 	// Still required by IDEs such as Eclipse and Visual Studio Code
-//	sourceCompatibility = JavaVersion.VERSION_17
-//	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 
 	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task if it is present.
 	// If you remove this line, sources will not be generated.
