@@ -22,7 +22,7 @@
 			"custom": "com.language_adapter.ScalaAdapter"
 		},
 		"entrypoints": {
-			"main": [
+			"init": [
 				{
 					"adapter": "custom",
 					"value": "com.example.example_mod.ExampleMod"
